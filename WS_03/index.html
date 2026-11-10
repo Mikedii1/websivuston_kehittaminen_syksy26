@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My first html page</title>
+    <style>
+        h1 {
+            color: blue;
+        }
+        .transition-button {
+            background-color: lightblue;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .transition-button:hover {
+            background-color: lightcoral;
+        }
+
+        .animation-box {
+            width: 50px;
+            height: 50px;
+            background-color: lightgreen;
+            position: relative;
+            animation: moveBox 2s infinite alternate;
+        }
+
+        @keyframes moveBox {
+            from {
+                left: 0;
+            }
+            to {
+                left: 100px;
+            }
+        }   
+
+        .pseudo-list li:nth-child(odd) {
+            background-color: lightgray;
+        }
+
+        .pseudo-list li:nth-child(even) {
+            background-color: white;
+        } 
+
+        .filter-image {
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+        .filter-image:hover {
+            filter: grayscale(0%);
+        }
+
+        .quote {
+            position: relative;
+            padding-left: 20px;
+            font-style: italic;
+        }
+
+        .quote::before {
+            content: '“';
+            font-size: 40px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: lightgray;
+        } 
+    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <h1>Mikke Montonen</h1>
+    <p>
+        Hei! Olen Mikke, opiskelen Laurea-ammattikorkeakoulussa.
+        Minua kiinnostaa muuttuva mailma ja tietotekniikka.
+    </p>
+
+    <img src="kuva.png" alt="Kuva minusta ruotsin laivalla" width="250" class="filter-image">
+    <h2>Harrastukseni</h2>
+    <ul class="pseudo-list">
+        <li>Pelaaminen</li>
+        <li>Kuntosali</li>
+        <li>Musiikin kuuntelu</li>
+    </ul>
+
+    <h2>Lempisivustoni</h2>
+    <p><a href="https://www.laurea.fi">Laurean etusivu</a></p>
+
+    <h2>Lempiruoat</h2>
+    <table>
+        <tr>
+            <th>Ruoka</th>
+            <th>Maku</th>
+        </tr>
+        <tr>
+            <td>Pizza</td>
+            <td>Joku maistuva</td>
+        </tr>
+        <tr>
+            <td>Burgeri</td>
+            <td>Pikaruokana</td>
+        </tr>
+        <tr>
+            <td>Kana ja riisi</td>
+            <td>itse tehtynä</td>
+        </tr>
+    </table>
+
+    <h2>Ota yhteyttä</h2>
+    <form>
+        <label for="name">name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+<div class="content-box">
+    <h3>sample heading</h3>
+    <p>Pelaan videopelejä vapaa-ajalla ja nukun.</p>
+</div>
+
+<button class="transition-button">Hover over me!</button>
+
+<div class="animation-box"></div>
+
+<blockquote class="quote">
+    This is a sample quote.
+</blockquote>
+
+</body>
+</html>
+
